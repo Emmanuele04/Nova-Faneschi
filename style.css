@@ -738,17 +738,18 @@ h2 em {
 .booking form {
   display: grid;
   gap: 1.25rem;
-  max-width: 410px;
+  max-width: 520px;
   margin-top: 2.3rem;
 }
 
 .booking label {
-  font: 500 0.58rem "DM Mono", monospace;
-  letter-spacing: 0.09em;
+  font: 700 0.65rem Montserrat, Arial, sans-serif;
+  letter-spacing: 0.05em;
 }
 
 .booking input,
-.booking select {
+.booking select,
+.booking textarea {
   display: block;
   width: 100%;
   padding: 0.72rem 0;
@@ -757,12 +758,29 @@ h2 em {
   border-bottom: 1px solid #bdb5aa;
   background: transparent;
   color: var(--black);
-  font: 400 0.85rem Montserrat, sans-serif;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
 }
 
 .booking input:focus,
-.booking select:focus {
+.booking select:focus,
+.booking textarea:focus {
   border-color: var(--gold-dark);
+}
+
+.booking textarea {
+  min-height: 160px;
+  padding: 0.9rem 1rem;
+  border: 1px solid #bdb5aa;
+  border-radius: 0;
+  line-height: 1.65;
+  resize: vertical;
+}
+
+.booking textarea::placeholder {
+  color: #827a70;
+  opacity: 1;
 }
 
 .booking button {
@@ -771,7 +789,7 @@ h2 em {
 
 .location {
   display: grid;
-  grid-template-rows: 1fr 245px auto;
+  grid-template-rows: auto 290px auto;
   gap: 1rem;
   padding: 6.5rem 5.5vw;
   background: var(--gold);
@@ -799,7 +817,8 @@ h2 em {
 
 .location iframe {
   width: 100%;
-  height: 245px;
+  height: 290px;
+  min-height: 0;
   border: 0;
   filter: grayscale(1) contrast(0.85);
 }
